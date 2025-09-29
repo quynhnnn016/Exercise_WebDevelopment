@@ -1,0 +1,31 @@
+#customers {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+#customers thead, #customers tbody {
+    font-size: 0.9em;
+    border: 1px solid #98bf21;
+    padding: 3px 7px 2px 7px;
+}
+
+#customers thead {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A7C942;
+    color: #ffffff;
+}
+
+#customers tbody tr:nth-child(2n+1) 
+{
+    background-color: whitesmoke;
+}
+
+#customers tbody tr:nth-child(2n) 
+{
+    background-color: #c7da90;
+}
+
+
