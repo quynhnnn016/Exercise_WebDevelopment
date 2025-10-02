@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Online Classifield - Nguyen Ngoc Nhu Quynh</title>
+        <script>
+            function help()
+            {
+                window.open("https://uel.edu.vn", "_blank");
+            }
+            function doSearch() 
+            {
+                window.location.href = "search.html";
+            }
+        </script>
+    </head>
+    <body>
+        <form style="background-color: rgb(159, 245, 245);">
+            <h1 style="color: red;">Online Classifield Search Form</h1>
+            <hr/>
+            <h3 style="font-weight: bold;">
+                1) Search for a classified in the following sections:
+            </h3>
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" name="opt1" id="opt1"/>
+                        <label for="opt1">Employment</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="opt2" id="opt2"/>
+                        <label for="opt2">Personal</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="opt3" id="opt3"/>
+                        <label for="opt3">For Sale</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="opt4" id="opt4"/>
+                        <label for="opt4">Miscellaneous</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="opt5" id="opt5"/>
+                        <label for="opt5">Housing</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="opt6" id="opt6"/>
+                        <label for="opt6">All of the above</label>
+                    </td>
+                </tr>
+            </table>
+            <h3 style="font-weight: bold;">
+                2) Search the following publications:
+            </h3>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="ck1" id="ck1"/>
+                        <label for="ck1">Midwest Times</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ck2" id="ck2"/>
+                        <label for="ck2">Modern News</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="ck3" id="ck3"/>
+                        <label for="ck3">Employment Today</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ck4" id="ck4"/>
+                        <label for="ck4">Great Lakes Classifieds</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="ck5" id="ck5"/>
+                        <label for="ck5">Middleton Daily</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ck6" id="ck6"/>
+                        <label for="ck6">Cashtown Daily News</label>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td><h3>3) From to</h3></td>
+                    <td><input type="date"> to <input type="date"></td>
+                </tr>
+            </table>
+                
+
+            <h3 style="font-weight: bold;">
+                4) Enter a few keywords to describe the classified:
+            </h3>
+            <textarea name="comment" style="width:100%; margin-left: 10px; margin-right: 10px;"></textarea>
+
+            <h3 style="font-weight: bold;">
+                5) Click one of the options below:
+            </h3>
+
+            <div class="actions">
+                <button type="button" onclick="doSearch()">
+                    <img src="images/Search.gif" alt="Search">
+                </button>
+                <button type="button" onclick="help()">
+                    <img src="images/Help.gif" alt="Help">
+                </button>
+                <button type="reset">
+                    <img src="images/Cancel.gif" alt="Cancel">
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
