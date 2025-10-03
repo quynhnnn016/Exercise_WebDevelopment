@@ -1,0 +1,53 @@
+BODY {
+  color: green; 
+}
+H1, H2, H3, H4, H5, H6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#top-nav ul {
+    list-style: none;
+    display: flex;
+    gap:  15px;
+    font-size: 16px;
+}
+BLOCKQUOTE {
+  background-color: silver;
+}
+UL {
+  list-style: circle url(../images/Apple.jpg) outside;
+}
+UL B {
+  color: rgb(155,0,0);
+}
+A {
+  font-size: 0.9em; 
+  color: blue;
+}
+A:hover {
+  color: red; 
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.Special {
+  color: rgb(153,102,6); 
+  font-weight: bold;
+}
+DIV.Article {
+  padding: 0.5em; 
+  border-style: solid; 
+  border-width: 2px; 
+  background-color: rgb(252,221,163);
+  width: 270px; 
+  float: right;
+}
+.imgLeft {
+  float: right;
+  margin: 0 10px 10px 0;
+  width: 90px;
+}
+FOOTER {
+  text-align: left;
+  font-style: italic;
+}
+
+
