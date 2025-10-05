@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <title>Travel Expense Report - Nguyen Ngoc Nhu Quynh</title>
+        <style>
+        body {
+            background:#d6f6fb;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 880px;
+            margin: 0 auto;
+            background: cyan;
+            border: 3px solid #1e73b7;
+            padding: 18px;
+            box-sizing: border-box;
+        }
+
+        h1.title {
+            font-size: 24px;
+            margin: 8px 0 12px;
+            padding-left: 6px;
+        }
+
+        hr.sep {
+            margin: 15px;
+        } 
+
+        .row {
+            margin: 8px 0;
+        }
+
+        label.inline {
+            display:inline-block;
+            min-width: 130px;
+            vertical-align: middle;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            padding: 4px 6px;
+            border: 1px solid #999;
+            font-size: 14px;
+        }
+
+        select {
+            padding: 3px;
+        }
+
+        textarea {
+            width: 92%;
+            min-height: 70px;
+            resize: vertical;
+            padding: 6px;
+            border: 1px solid #999;
+            font-size: 14px;
+        }
+      
+        table.expenses {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            background: #f9ffff;
+        }
+        table.expenses th, table.expenses td {
+            border: 1px solid #9fbfcf;
+            padding: 6px;
+            text-align: left;
+            font-size: 13px;
+        }
+        table.expenses th {
+            background: #e6fbff;
+        }
+        table.expenses input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 4px;
+        }
+        table.expenses select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .small {
+            width: 90px;
+        }
+        .amount {
+            width: 70px;
+        }
+
+        .radios { margin-left: 6px; }
+
+        .buttons {
+            margin-top: 12px;
+        }
+        .buttons button {
+            padding: 6px 12px;
+            margin-right: 8px;
+            border: 1px solid #777;
+            background: #eee;
+            cursor: pointer;
+        }
+        </style>
+
+        <script>
+            function submitTravel() {
+                alert('Travel expenses submitted');
+            }
+
+            function resetTravel() {
+                document.getElementById('travelForm').reset();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div align="center"><img src=DeLong.jpg></div>
+
+            <h1 class="title">Travel Expense Report</h1>
+            <hr class="sep">
+
+            <form id="travelForm" onsubmit="return false;">
+
+                <div class="row">
+                    <label class="inline">1) First Name:</label>
+                    <input type="text" id="firstName" name="firstName" size="18">
+                    <label style="margin-left:14px;">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" size="18">
+                </div>
+
+                <div class="row">
+                    <label class="inline">2) Social Security Number:</label>
+                    <input type="text" name="ssn" size="18">
+                </div>
+
+                <div class="row">
+                    <label class="inline">3) Department:</label>
+                    <select name="department">
+                        <option>Accounting</option>
+                        <option>Sales</option>
+                        <option>Marketing</option>
+                        <option>IT</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label class="inline" style="vertical-align: top;">4) Describe the purpose of your trip.</label>
+                    <textarea name="purpose"></textarea>
+                </div>
+
+                <div class="row">
+                    <label class="inline" style="vertical-align: top;">5) Itemize your travel expenses</label>
+                    <div style="width:78%; display:inline-block; vertical-align:top;">
+                    <table class="expenses">
+                        <thead>
+                            <tr>
+                                <th class="small">Date</th>
+                                <th>Description</th>
+                                <th class="small">Category</th>
+                                <th class="amount">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="date1" placeholder="mm/dd/yy"></td>
+                                <td><input type="text" name="desc1"></td>
+                                <td>
+                                <select name="cat1">
+                                    <option>Meal</option>
+                                    <option>Travel</option>
+                                    <option>Lodging</option>
+                                    <option>Other</option>
+                                </select>
+                                </td>
+                                <td><input type="text" id="amt1" name="amt1"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" name="date2" placeholder="mm/dd/yy"></td>
+                                <td><input type="text" name="desc2"></td>
+                                <td>
+                                <select name="cat2">
+                                    <option>Meal</option>
+                                    <option>Travel</option>
+                                    <option>Lodging</option>
+                                    <option>Other</option>
+                                </select>
+                                </td>
+                                <td><input type="text" id="amt2" name="amt2"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" name="date3" placeholder="mm/dd/yy"></td>
+                                <td><input type="text" name="desc3"></td>
+                                <td>
+                                <select name="cat3">
+                                    <option>Meal</option>
+                                    <option>Travel</option>
+                                    <option>Lodging</option>
+                                    <option>Other</option>
+                                </select>
+                                </td>
+                                <td><input type="text" id="amt3" name="amt3"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" name="date4" placeholder="mm/dd/yy"></td>
+                                <td><input type="text" name="desc4"></td>
+                                <td>
+                                <select name="cat4">
+                                    <option>Meal</option>
+                                    <option>Travel</option>
+                                    <option>Lodging</option>
+                                    <option>Other</option>
+                                </select>
+                                </td>
+                                <td><input type="text" id="amt4" name="amt4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="inline">6) Have you submitted your receipts?</label>
+                    <span class="radios">
+                    <label><input type="radio" name="receipts" value="yes"> Yes</label>
+                    <label style="margin-left:12px;"><input type="radio" name="receipts" value="no"> No</label>
+                    </span>
+                </div>
+
+                <div class="row buttons">
+                    <button type="button" onclick="submitTravel()">Submit travel expenses</button>
+                    <button type="button" onclick="resetTravel()">Reset</button>
+                </div>
+
+                <div>
+                    Questions? Contact Debbie Larson in Accounting (ext. 2150).
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
