@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Contact - Nguyen Ngoc Nhu Quynh</title>
+        <style>
+            body {
+                font-family:'Times New Roman', Times, serif;
+                margin: 40px;
+            }
+            form {
+                border: 1px solid #ccc;
+                padding: 20px;
+                width: 500px;
+            }
+            label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+            input, textarea, select {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+            button {
+                margin-top: 15px;
+                background-color: #9b0035;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #750029;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Contact the editorial office</h2>
+
+        <form method="get" action="result.html">
+            <label>Full name</label>
+            <input type="text" name="fullname" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Send to</label>
+            <select name="department">
+                <option>Editorial board</option>
+                <option>News Department</option>
+                <option>Board of Perspectives</option>
+                <option>World Board</option>
+                <option>Business Department</option>
+            </select>
+
+            <label>Title</label>
+            <input type="text" name="title">
+
+            <label>Content</label>
+            <textarea name="content" rows="5"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>
