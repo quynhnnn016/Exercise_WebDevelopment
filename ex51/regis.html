@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Regis - Nguyen Ngoc Nhu Quynh</title>
+        <style>
+            .form-group {
+                display:flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            input {
+                flex:none;
+                padding: 0px 0px 5px 8px;
+            }
+        </style>
+    </head>
+    <body bgcolor="lightgreen">
+        <p align="center">
+            <img src="Logo.gif"/>
+        </p>
+        <h1>Newborn Registration</h1>
+        <form class="form">
+            <div class="form-group">
+                <label for="ngay">Date:</label>
+                <input id="ngay" type="date">
+            </div>
+
+            <div class="form-group">
+                <label for="firstname">1) Infant's first name:</label>
+                <input id="firstname" type="text">
+                <label for="lastname">Last:</label>
+                <input id="lastname" type="text">
+            </div>
+            
+            <div class="form-group">
+                <label for="record">2) Medical Record #:</label>
+                <input id="record" type="number">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">3) Date of bith:</label>
+                <input id="dob" type="date">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">4) Birth weight:</label>
+                <input id="weight" type="number">
+            </div>
+
+            <div class="form-group">
+                <label for="apg">5) APGAR score:</label>
+                <input id="apg" type="number">
+            </div>
+
+            <div class="form-group">
+                <label for="m_firstname">6) Mother's first name:</label>
+                <input id="m_firstname" type="text">
+                <label for="m_lastname">Last:</label>
+                <input id="m_lastname" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="f_firstname">7) Father's first name:</label>
+                <input id="f_firstname" type="text">
+                <label for="f_lastname">Last:</label>
+                <input id="f_lastname" type="text">
+            </div>
+            
+            <div>
+                <label>8) Physician (check all that apply):</label>
+                <select name="person" multiple size="5">
+                    <option value="1">Dr. A</option>
+                    <option value="2">Dr. B</option>
+                    <option value="3">Dr. C</option>
+                    <option value="4">Dr. D</option>
+                </select>
+            </div>
+
+            <p align="center">
+                <button align="center" type="submit">Register</button>
+                <button align="center" type="reset">Cancel</button>
+            </p>
+        </form>
+    </body>
+</html>
