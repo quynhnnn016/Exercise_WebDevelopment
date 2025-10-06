@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>List of products - Nguyen Ngoc Nhu Quynh</title>
+        <style>
+            .total {
+                display:flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            table {
+                border-collapse: collapse;
+                text-align: center;
+                margin: 10px;
+                border: 1px solid;               
+            }
+            th, td {
+                padding: 5px 10px 5px 10px;
+            }
+            .total-row {
+                border-top: 1px solid;
+                text-align: right;
+            }
+            button {
+                background-color: orange;
+                border-color: rgb(192, 127, 5);
+                color: white;
+                font-weight: bold;
+                padding: 6px 20px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #ff9933;  
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part Number</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Item table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C112</td>
+                        <td>Mouse</td>
+                        <td>19.95$</td>
+                        <td><input type="text" id="qty1"/></td>
+                        <td>
+                            <input type="text" id="item1" readonly/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>B124</td>
+                        <td>Keyboard US</td>
+                        <td>29.95$</td>
+                        <td><input type="text" id="qty2"/></td>
+                        <td><input type="text" id="item2" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td>U125</td>
+                        <td>USB KingMax</td>
+                        <td>39.95$</td>
+                        <td><input type="text" id="qty3"/></td>
+                        <td><input type="text" id="item3" readonly/></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="5">
+                            <div>
+                                <label>Total:</label>
+                                <input type="text" id="total" readonly>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="text-align: right;">
+                        <td colspan="5">
+                            <button type="button">Sum</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>
