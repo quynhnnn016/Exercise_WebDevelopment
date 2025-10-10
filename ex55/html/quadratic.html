@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Quadratic equation - Nguyen Ngoc Nhu Quynh</title>
+        <script src="../js/mainjs.js"></script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <table border="1" cellpadding="0">
+                    <tr style="background-color: aquamarine; text-align:center;">
+                        <td colspan="2">The quadratic quation</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;">a:</td>
+                        <td><input type="text" id="a" name="a"/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;">b:</td>
+                        <td><input type="text" id="b" name="b"/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;">c:</td>
+                        <td><input type="text" id="c" name="c"/></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;">Result:</td>
+                        <td><textarea name="result" id="result" rows="2"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;"></td>
+                        <td>
+                            <button type="button" onclick="call_quadratic(a.value, b.value, c.value, result)">Find solution</button>
+                            <button type="reset">Clear</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
