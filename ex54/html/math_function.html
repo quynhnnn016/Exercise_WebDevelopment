@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Math Function - Nguyen Ngoc Nhu Quynh</title>
+        <script src="../js/math_function.js"></script>
+    </head>
+    <body>
+        <form name="math_form">
+            <fieldset>
+                <legend>Math function</legend>
+                    <table border="1" cellspacing="0" cellpadding="2">
+                        <tr>
+                            <td>a:</td>
+                            <td><input id="a" type="text" name="a"/></td>
+                        </tr>
+                        <tr>
+                            <td>b:</td>
+                            <td><input id="b" type="text" name="b"/></td>
+                        </tr>
+                        <tr>
+                            <td>c:</td>
+                            <td><input id="c" type="text" name="c"/></td>
+                        </tr>
+                        <tr>
+                            <td>Result:</td>
+                            <td><input id="result" type="text" name="result"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button type="button" onclick="call_Max(a.value, b.value, c.value, result)">MAX</button>
+                                <button type="button" onclick="call_Min(a.value, b.value, c.value, result)">MIN</button>
+                                <button type="button" onclick="find_sin(a.value, result)">sin(a)</button>
+                                <button type="button" onclick="find_cos(a.value, result)">cos(a)</button>
+                                <button type="button" onclick="call_multiply(a.value, b.value, result)">a*b</button>
+                            </td>
+                        </tr>
+                    </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
