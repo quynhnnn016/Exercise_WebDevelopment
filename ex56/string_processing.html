@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <title>Exercise 56: String Processing</title>
+        <style>
+            body 
+            { 
+                font-family: Arial; margin: 30px; 
+            }
+            table 
+            { 
+                border: 1px solid gray; margin: auto; padding: 10px; 
+            }
+            td 
+            { 
+                padding: 5px; text-align: center; 
+            }
+            textarea 
+            { 
+                width: 220px; height: 100px; 
+            }
+            input[type="button"] 
+            { 
+                width: 240px; margin: 3px; 
+            }
+            h2 
+            {
+                 text-align: center; 
+            }
+        </style>
+        <script>
+            let isEnabled = false;
+
+            function enableInput() 
+            {
+                document.getElementById("inputData").disabled = false;
+                document.getElementById("inputData").focus();
+                isEnabled = true;
+            }
+
+            function getData() 
+            {
+                if (!isEnabled) {
+                    alert("Please click 'Enter Data' first!");
+                    return null;
+                }
+                return document.getElementById("inputData").value;
+            }
+
+            function countUppercase() 
+            {
+                let str = getData();
+                if (str == null) return;
+                let count = 0;
+                for (let i = 0; i < str.length; i++) {
+                    if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')
+                        count++;
+                }
+                document.getElementById("result").value = "Number of uppercase letters: " + count;
+            }
+
+            function countLowercase() 
+            {
+                let str = getData();
+                if (str == null) return;
+                let count = 0;
+                for (let i = 0; i < str.length; i++) {
+                    if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z')
+                        count++;
+                }
+                document.getElementById("result").value = "Number of lowercase letters: " + count;
+            }
+
+            function toUppercase() 
+            {
+                let str = getData();
+                if (str == null) return;
+                document.getElementById("result").value = str.toUpperCase();
+            }
+
+            function toLowercase() 
+            {
+                let str = getData();
+                if (str == null) return;
+                document.getElementById("result").value = str.toLowerCase();
+            }
+
+            function countWords() 
+            {
+                let str = getData();
+                if (str == null) return;
+                let words = str.trim().split(/\s+/);
+                document.getElementById("result").value = "Word count: " + words.length;
+            }
+
+            function wordPerLine() 
+            {
+                let str = getData();
+                if (str == null) return;
+                let words = str.trim().split(/\s+/);
+                document.getElementById("result").value = words.join("\n");
+            }
+
+            function printVowelsConsonants() 
+            {
+                let str = getData();
+                if (str == null) return;
+                let vowels = "", consonants = "";
+                for (let i = 0; i < str.length; i++) {
+                    let ch = str.charAt(i).toLowerCase();
+                    if (ch >= 'a' && ch <= 'z') {
+                        if ("aeiou".indexOf(ch) !== -1)
+                            vowels += ch + " ";
+                        else
+                            consonants += ch + " ";
+                    }
+                }
+                document.getElementById("result").value = 
+                    "Vowels: " + vowels + "\nConsonants: " + consonants;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Using String Processing functions</h2>
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Input Data:</legend>
+                        <textarea id="inputData" disabled></textarea>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Result:</legend>
+                        <textarea id="result"></textarea>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Enter Data" onclick="enableInput()"></td>
+                <td><input type="button" value="Count uppercase letters" onclick="countUppercase()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Uppercase display" onclick="toUppercase()"></td>
+                <td><input type="button" value="Output one word per line" onclick="wordPerLine()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Lowercase display" onclick="toLowercase()"></td>
+                <td><input type="button" value="Word count" onclick="countWords()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Count lowercase letters" onclick="countLowercase()"></td>
+                <td><input type="button" value="Print vowels and consonants" onclick="printVowelsConsonants()"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="button" value="W3C’s String Processing Website"
+                    onclick="window.open('https://www.w3schools.com/')"></td>
+            </tr>
+        </table>
+    </body>
+</html>
